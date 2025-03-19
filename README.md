@@ -1,4 +1,8 @@
 # Magisk Patcher v4
+- We are trying move this into a static website to make patch more easy
+- try this new one [click me](https://circlecashteam.github.io/MagiskPatcher/)
+
+
 `A tool to patch boot image with magisk on desktop`
 
 # Screenshots
