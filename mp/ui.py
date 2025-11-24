@@ -41,11 +41,11 @@ INTRODUCE = """\
 - License      \t: %s
 - PythonVersion : %s
 - Work Dir     \t: %s
-- 介绍：
-\tMagisk Patcher 是由 %s 开发的用来在桌面系统上修补手机magisk的一个简单的小程序，基于官方的magiskboot
-- 感谢:
+- Introduction:
+\tMagisk Patcher is a simple small program developed by %s for patching mobile Magisk on desktop systems, based on the official magiskboot
+- Thanks:
 \t- magiskboot on mingw32 from https://github.com/svoboda18/magiskboot
-\t- customtkinter ui界面库，有一说一确实好看
+\t- customtkinter UI library, it really looks good
 """ %(f'{OS} ({REL})' if REL else OS, ARCH, VERSION, AUTHOR, LICENSE, pyversion, getcwd(), AUTHOR)
 if OS == 'windows':
     prebuilt_magiskboot = op.abspath(op.join(op.dirname(argv[0]), "bin", OS, ARCH, "magiskboot" + EXT))
@@ -67,7 +67,7 @@ class MagiskPatcherUI(ctk.CTk):
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
 
-        self.lang = ctk.StringVar(value=Language.supports[0])
+        self.lang = ctk.StringVar(value=Language.select)
         self.lang_dict = getattr(Language, self.lang.get())
 
         self.logo = ctk.CTkImage(Image.open(BytesIO(logodata), "r"), size=(240, 100))

@@ -3,7 +3,7 @@ from dataclasses import dataclass
 @dataclass
 class Language:
     supports = ['zh_CN', 'en_US']
-    select = supports[0]
+    select = supports[1]
     zh_CN = {
         'Home': "主页",
         'boot img': "boot镜像",
